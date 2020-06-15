@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+ body {
+    color: #303030;
+}
+header {
+    height: 60px;
+    background-color: cadetblue;
+    color: #FFF;
+    font-size: 45px;
+    padding-left: 10px;
+}
+.container {
+    padding: 0 10px;
+}
+footer {
+    color: lightslategray;
+    padding-left: 20px;
+    padding-top: 50px;
+}
