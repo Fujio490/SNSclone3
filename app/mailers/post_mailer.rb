@@ -1,6 +1,6 @@
 class PostMailer < ApplicationMailer
     def contact_mail(post)
         @post = post
-        mail to: "自分のメールアドレス", subject: "お問い合わせの確認メール"
+        mail to: "@blog.user.email", subject: "画像を投稿しました"
     end
 end
