@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
     before_action :set_blog, only: [:show, :edit, :update, :destroy]
+    before_action :block_other_user, only: [:edit, :update, :destroy]
     def index
       @blogs = Blog.all
     end
@@ -45,5 +46,10 @@ class BlogsController < ApplicationController
     end
     def set_blog
       @blog = Blog.find(params[:id])
+    end
+    def block_other_user
+      if current_user.id != @blog.user_id
+        redirect_to blogs_path, notice:"投稿者ではありません"
+      end
     end
   end
