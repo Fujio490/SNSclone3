@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get '/', to: 'users#new'
   get '/users', to: 'users#new'
   resources :sessions, only: [:new, :create, :destroy]
-  resources :users, only: [:new, :create, :show, :edit]
+  resources :users
   resources :blogs do
     collection do
       post :confirm
