@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
   get '/', to: 'users#new'
-  get '/users', to: 'users#new'
   resources :sessions, only: [:new, :create, :destroy]
   resources :users
   resources :blogs do
