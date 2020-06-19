@@ -13,7 +13,7 @@ class BlogsController < ApplicationController
         render :new
       else
         if @blog.save
-          PostMailer.contact_mail(@blog).deliver
+          #PostMailer.contact_mail(@blog).deliver
           redirect_to blogs_path, notice: "ブログを作成しました！"
         else
           render :new
